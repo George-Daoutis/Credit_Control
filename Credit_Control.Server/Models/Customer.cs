@@ -22,7 +22,7 @@
         public decimal CreditLimit { get; set; }
         public decimal AvailableCredit => CreditLimit - CurrentBalance;
         public bool IsCreditBlocked => CurrentBalance > CreditLimit;
-        public List<Invoice> Invoices { get; set; } = [];
+        public ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
 
     }
 }
